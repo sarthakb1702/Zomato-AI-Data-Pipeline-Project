@@ -171,6 +171,10 @@ zomato_batch
 reload_raw
      ↓
 dbt_build_core
+     ↓
+enrich_reviews
+     ↓
+dbt_build_ai
 ```
 
 ### `reload_raw`
@@ -182,6 +186,14 @@ Reloads the required raw data into the Snowflake RAW layer.
 Runs the dbt transformation pipeline to build the staging, core, and analytical models.
 
 Airflow runs inside a **Docker** environment, making the orchestration setup easier to reproduce.
+
+### `enrich_reviews`
+
+Uses Google Gemini to analyze and enrich customer reviews with AI-generated insights.
+
+### `dbt_build_ai`
+
+Runs the dbt models tagged with `ai`, preparing the data required by the project's **AI applications, including RAG and Text-to-SQL**.
 
 ---
 
@@ -259,8 +271,6 @@ Add the required credentials for services such as:
 * Snowflake
 * Google Gemini
 
-> ⚠️ Never commit real credentials, API keys, passwords, or private configuration files to GitHub.
-
 ---
 
 ## ❄️ dbt
@@ -309,31 +319,7 @@ streamlit run ai/text_to_sql.py
 
 ---
 
-## 🔐 Security
 
-Sensitive and generated files are excluded from version control.
-
-The following should **not** be committed to GitHub:
-
-* API keys
-* AWS credentials
-* Snowflake passwords
-* `.env` files
-* Datasets containing sensitive information
-* Airflow logs
-* Python caches
-* Generated files
-
-Example configuration files are provided:
-
-```text
-.env.example
-profiles.yml.example
-```
-
-These files show the required configuration structure without exposing actual credentials.
-
----
 
 ## 📊 What This Project Demonstrates
 
