@@ -34,7 +34,7 @@ The pipeline combines modern data engineering technologies with AI to transform 
 | **Apache Airflow**        | Pipeline orchestration                        |
 | **Docker**                | Containerized Airflow environment             |
 | **Python**                | Data processing and AI applications           |
-| **Google Gemini**         | Generative AI and natural-language processing |
+| **Google Gemini API**         | Generative AI and natural-language processing |
 | **Sentence Transformers** | Review embeddings and semantic search         |
 | **Streamlit**             | Interactive AI applications                   |
 
