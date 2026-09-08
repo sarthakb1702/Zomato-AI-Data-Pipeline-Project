@@ -13,7 +13,7 @@ Amazon S3
      ↓
 Snowflake
      ↓
-dbt
+    dbt
      ↓
 Apache Airflow
      ↓
