@@ -6,7 +6,7 @@ An end-to-end **Data Engineering + AI project** that processes Zomato-style data
 
 ```text
 Source Data → Amazon S3 → Snowflake → dbt → Airflow → AI
-
+```
 🛠️ Tech Stack
 Amazon S3 – Raw data storage
 Snowflake – Data warehouse
