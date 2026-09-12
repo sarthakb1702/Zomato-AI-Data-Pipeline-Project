@@ -234,7 +234,7 @@ def run_query(sql):
 
 
 st.title("Chat with your Zomato Data")
-st.caption(f"Ask in English, {MODEL} writes the SQL, Snowflake runs it")
+
 
 with st.sidebar:
     st.header("Example Questions")
